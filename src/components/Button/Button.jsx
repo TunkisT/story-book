@@ -25,7 +25,7 @@ function Button({ children, type, color }) {
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   type: PropTypes.oneOf(['submit', 'reset', 'button']),
-  color: PropTypes.oneOf(['primary', 'success', 'danger']),
+  color: PropTypes.oneOf(['primary', 'success', 'danger']).isRequired,
 };
 
 export default Button;
