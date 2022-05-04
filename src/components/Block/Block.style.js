@@ -6,4 +6,5 @@ export const BlockEl = styled.div`
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 1rem;
+  margin-bottom: 0.5rem;
 `;

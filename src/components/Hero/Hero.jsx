@@ -28,8 +28,13 @@ function Hero({ children, type, color }) {
 
 Hero.propTypes = {
   children: PropTypes.node.isRequired,
-  type: PropTypes.oneOf(['title', 'subtitle']),
+  type: PropTypes.oneOf(['title', 'subtitle']).isRequired,
   color: PropTypes.oneOf(['primary', 'success', 'danger']),
+};
+
+Hero.defaultProps = {
+  color: 'primary',
+  type: 'title',
 };
 
 export default Hero;
