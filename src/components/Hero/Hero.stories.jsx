@@ -7,12 +7,9 @@ export default {
 };
 
 export const title = () => (
-  <Hero color='primary' type='title'>
-    Success Hero
-  </Hero>
-);
-export const subtitle = () => (
-  <Hero color='danger' type='subtitle'>
-    Success subtitle
-  </Hero>
+  <Hero
+    color='success'
+    subtitle='Success subtitle'
+    title='Success title'
+  ></Hero>
 );

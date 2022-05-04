@@ -6,35 +6,30 @@ const colors = {
   primary: {
     background: 'green',
   },
-  success: {
-    background: 'blue',
-  },
   danger: {
     background: 'red',
   },
 };
 
-function Hero({ children, type, color }) {
+function Hero({ title, subtitle, color }) {
   return (
     <S.HeroEl color={colors[color]}>
-      {type === 'title' ? (
-        <S.Title>{children}</S.Title>
-      ) : (
-        <S.Subtitle>{children}</S.Subtitle>
-      )}
+      <S.Title>{title}</S.Title>
+      <S.Subtitle>{subtitle}</S.Subtitle>
     </S.HeroEl>
   );
 }
 
 Hero.propTypes = {
-  children: PropTypes.node.isRequired,
-  type: PropTypes.oneOf(['title', 'subtitle']).isRequired,
+  title: PropTypes.node.isRequired,
+  subtitle: PropTypes.node.isRequired,
   color: PropTypes.oneOf(['primary', 'success', 'danger']),
 };
 
 Hero.defaultProps = {
   color: 'primary',
-  type: 'title',
+  title: 'title',
+  subtitle: 'subtitle',
 };
 
 export default Hero;
