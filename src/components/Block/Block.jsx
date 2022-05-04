@@ -20,6 +20,11 @@ function Block({ children, color }) {
 
 Block.propTypes = {
   children: PropTypes.node.isRequired,
+  color: PropTypes.oneOf(['primary', 'success', 'danger']),
+};
+
+Block.defaultProps = {
+  color: 'primary',
 };
 
 export default Block;
